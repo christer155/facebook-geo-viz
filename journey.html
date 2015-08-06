@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+	<head> 
+
+    <style type="text/css">
+	    html, body, #map-canvas { 
+			/* Set to 100% because if can't find these elements will assume a size of 0 */
+			height : 99%; 
+			margin : 0; 
+			padding : 0;
+		}
+		#slider-title {
+			background : #f6bc10;
+			font-family : "Oxygen", sans-serif;
+			font-size : 25px;
+			padding : 2px;
+			margin-bottom: 10px;
+			position : absolute; 
+			z-index : 99; 
+			bottom: 30px;
+		}
+		/*
+		#slider {
+			position : absolute; 
+			z-index : 99; 
+			bottom: 1000px;
+		}*/
+    </style>
+
+	</head>
+
+    <body>
+
+    	<div id="map-canvas"> 
+    	</div>
+
+    	<div id="slider-title">Start journey from: </div>
+		<select name="slider-area" id="slider-area"> </select>
+
+    </body>
+
+    <!-- Load font --> 
+    <link href='js/jquery-ui-1.11.4.custom/jquery-ui.min.css' rel='stylesheet' type='text/css'>
+
+	<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+    <!-- Hide this key somehow? --> 
+    <!-- Load the google maps api --> 
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmdQoseGd9x97vDIZHm2RfUiW0VgDqpD8"> </script>
+
+    <!-- Load jQuery --> 
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <!-- Load Raphael -->
+    <script type="text/javascript" src="js/raphael-min.js"> </script>
+
+    <!-- The data --> 
+    <script type="text/javascript" src="locations_carolyn.js"> </script>
+
+    <!-- Helper functions --> 
+    <script type="text/javascript" src="mercator.js"> </script> 
+
+    <!-- The animation --> 
+    <script type="text/javascript" src="journey.js"> </script> 
+
+</html>
